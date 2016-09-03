@@ -1,0 +1,29 @@
+Works with many and large image files with long loading times.
+
+Isn't very easy to add new elements to the poll currently.
+
+---
+
+**Ideas for future:**
+
+
+//insert in canvas.php in the javascript loop where it's creating all the bars
+//Grab data from database
+<?php
+$result = mysql_query("SELECT SUM(NULLIF(ada ,0)) FROM Legends") or die(mysql_error());
+$legend_data = mysql_result($result,0);
+?>;
+var votes = <?php echo json_encode($legend_data); ?>;
+
+
+
+<?php
+
+mysql_connect('localhost', 'root', '');
+if (!mysql_select_db('mydb')) {
+    echo("creating database!\n");
+    mysql_query('CREATE DATABASE mydb');
+    mysql_select_db('mydb');
+}
+
+?>
