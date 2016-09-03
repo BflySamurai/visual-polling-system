@@ -7,6 +7,9 @@ Isn't very easy to add new elements to the poll currently.
 **Ideas for future:**
 
 
+Make it so the there is one variable for the table name so that it only has to be written in once for all the files.
+
+
 //insert in canvas.php in the javascript loop where it's creating all the bars
 //Grab data from database
 <?php
